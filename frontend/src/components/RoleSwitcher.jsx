@@ -9,7 +9,7 @@ const RoleSwitcher = ({ currentRole, setRole }) => {
   ];
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-white p-2 rounded-2xl border border-gray-100 z-50 flex gap-1">
+    <div className="fixed bottom-8 right-8 bg-white p-2 rounded-2xl border border-gray-100 z-50 flex gap-1 shadow-lg">
       {roles.map((role) => (
         <button
           key={role.id}
