@@ -4,7 +4,7 @@ import { Bell, Car, MapPin, User, Clock } from 'lucide-react';
 const DriverDashboard = () => {
   return (
     <div className="min-h-screen bg-slate-100">
-      {/* HEADER */}
+
       <div className="bg-indigo-700 px-6 pt-8 pb-10 flex justify-between">
         <div>
           <p className="text-indigo-200 text-sm">Driver Console</p>
@@ -19,10 +19,10 @@ const DriverDashboard = () => {
         </div>
       </div>
 
-      {/* CONTENT */}
+
       <div className="-mt-6 px-5 pb-10 space-y-6">
 
-        {/* NEW ASSIGNMENTS */}
+
         <h2 className="text-slate-800 font-semibold">New Assignments</h2>
 
         <Card>
@@ -39,7 +39,7 @@ const DriverDashboard = () => {
           </button>
         </Card>
 
-        {/* CURRENT ASSIGNMENT */}
+
         <h2 className="text-slate-800 font-semibold">Current Assignment</h2>
 
         <Card>
@@ -64,7 +64,7 @@ const DriverDashboard = () => {
           </button>
         </Card>
 
-        {/* STATS (ALWAYS VISIBLE) */}
+
         <div className="grid grid-cols-3 text-center pt-6">
           <Stat label="Today" value="12" />
           <Stat label="Parked" value="8" color="text-green-600" />
@@ -75,7 +75,7 @@ const DriverDashboard = () => {
   );
 };
 
-/* ---------- COMPONENTS ---------- */
+
 
 const Card = ({ children }) => (
   <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-5">

@@ -26,30 +26,12 @@ const BottomNav = ({ role }) => {
           <NavItem to="/settings" icon={Settings} label="Settings" />
         </>
       )}
-      
-      {role === 'manager' && (
-        <>
-           <NavItem to="/manager" icon={LayoutDashboard} label="Dashboard" />
-           <NavItem to="/manager/parked" icon={Car} label="Parked" />
-           <NavItem to="/manager/staff" icon={Users} label="Staff" />
-           <NavItem to="/manager/settings" icon={Settings} label="Settings" />
-        </>
-      )}
 
-       {role === 'driver' && (
-        <>
-           <NavItem to="/driver" icon={Car} label="Tasks" />
-           <NavItem to="/driver/history" icon={History} label="History" />
-           <NavItem to="/driver/settings" icon={Settings} label="Settings" />
-        </>
-      )}
       
       {role === 'admin' && (
          <>
            <NavItem to="/admin" icon={LayoutDashboard} label="Overview" />
-           <NavItem to="/admin/locations" icon={Home} label="Locations" />
            <NavItem to="/admin/analytics" icon={Activity} label="Analytics" />
-           <NavItem to="/admin/settings" icon={Settings} label="Settings" />
         </>
       )}
     </nav>
