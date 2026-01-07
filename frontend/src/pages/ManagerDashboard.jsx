@@ -3,7 +3,7 @@ import { ArrowLeft, UserPlus, Search, Phone, Edit, MapPin, Clock, CheckCircle, U
 import { Link } from 'react-router-dom';
 
 const ManagerDashboard = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+
   const [isAddDriverOpen, setIsAddDriverOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -94,25 +94,7 @@ const ManagerDashboard = () => {
            />
         </div>
 
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-           {['All', 'Parked', 'Retrieving', 'Retrieved'].map(filter => (
-             <button
-               key={filter}
-               onClick={() => setActiveFilter(filter)}
-               className={`px-5 py-2.5 rounded-xl text-sm font-bold whitespace-nowrap border ${
-                 activeFilter === filter 
-                   ? 'bg-indigo-700 text-white border-indigo-700' 
-                   : 'bg-white text-slate-500 border-gray-200'
-               }`}
-             >
-               {filter} {filter === 'All' ? '(5)' : filter === 'Parked' ? '(3)' : filter === 'Retrieving' ? '(1)' : '(1)'}
-             </button>
-           ))}
-        </div>
-
         <div className="space-y-4">
-
-            {(activeFilter === 'All' || activeFilter === 'Parked') && (
              <div className="bg-white p-5 rounded-3xl border border-gray-200">
                 <div className="flex justify-between items-start mb-4">
                    <div className="flex items-center gap-3">
@@ -175,10 +157,7 @@ const ManagerDashboard = () => {
                    </div>
                 </div>
              </div>
-            )}
 
-
-            {(activeFilter === 'All' || activeFilter === 'Parked') && (
              <div className="bg-white p-5 rounded-3xl border border-gray-200">
                 <div className="flex justify-between items-start mb-4">
                    <div className="flex items-center gap-3">
@@ -241,10 +220,7 @@ const ManagerDashboard = () => {
                    </div>
                 </div>
              </div>
-            )}
 
-
-            {(activeFilter === 'All' || activeFilter === 'Retrieving') && (
              <div className="bg-white p-5 rounded-3xl border border-gray-200">
                 <div className="flex justify-between items-start mb-4">
                    <div className="flex items-center gap-3">
@@ -307,10 +283,7 @@ const ManagerDashboard = () => {
                    </div>
                 </div>
              </div>
-            )}
 
-
-            {(activeFilter === 'All' || activeFilter === 'Parked') && (
              <div className="bg-white p-5 rounded-3xl border border-gray-200">
                 <div className="flex justify-between items-start mb-4">
                    <div className="flex items-center gap-3">
@@ -373,10 +346,7 @@ const ManagerDashboard = () => {
                    </div>
                 </div>
              </div>
-            )}
 
-
-            {(activeFilter === 'All' || activeFilter === 'Retrieved') && (
              <div className="bg-white p-5 rounded-3xl border border-gray-200">
                 <div className="flex justify-between items-start mb-4">
                    <div className="flex items-center gap-3">
@@ -439,7 +409,6 @@ const ManagerDashboard = () => {
                    </div>
                 </div>
              </div>
-            )}
         </div>
       </div>
 
